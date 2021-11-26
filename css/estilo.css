@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*border: #1c558f dotted;*/
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300&display=swap');
+.cabeza{
+    position: sticky;
+    top: 0;
+    z-index: 1;/*defino un valor para que se muestre el elemento por encima de o por debajo de. Para que no se superpongan elementos*/
+    background-color: #2D2F31;
+}
+body{
+    background-color: #f0ddaa;
+}
+
+.menu{/*estilo de toda la barra nav*/
+    width: 100%;/*que me tome el 100% del espacio de mi pag*/
+    /*height: auto;para que cuando achique la pag. los items se mantengan dentro de la barra nav* gris*/
+    background-color: #2D2F31;
+    position: sticky;/*A pesar de moverlo respeta el espacio que ocupan otros elementos de la pag*/
+    text-align: center;
+    padding: 5px;
+    top: 0;/*importante para que me aparezca arriba cuando scroleo?*/
+}
+
+ul{/*es toda la barra menu. El padre/contenedor*/
+    list-style: none;
+    font-size: 0;
+}
+ul li{/*li es cada item de mi lista*/
+    width: 100px;/*el ancho que quiero que ocupen los elementos dentro de la pag*/
+    font-size: 14px;/*BOX MODELING*/
+    padding: 5px;/*BOX MODELING*/
+    /*margin: 10px;la distancia de los bordes externos con respecto a la seccion*/ 
+    text-align: center;
+    display: inline-block;
+    position: relative;/*me guarda la posicion inicial, si scroleo lo pierdo de vista*/
+}
+li a{
+    text-decoration: none;/*le quito lo subrrayado a los links (a)*/
+    color: blanchedalmond;/*color letras*/   
+}
+
+ul ul{ /*para estilo submenu (2do nivel)*/
+    position: absolute;/*el espacio que ocupaba puede ser utilizado por otro elemento*/
+    display: none;/*controla la visibilidad del elemento: visible o no visible*/
+    background-color: #2D2F31;/*color de fondo de mi caja de submenu*/
+}
+ul ul li {/*estilo de cada item de mi submenu*/
+    display: block;
+    width: 200px;/*ancho del background de los items de mi submenu*/
+    margin: 20px;
+    background-color: rgb(148, 192, 175);/*color de fondo de la caja de cada item de mi submenu*/
+
+}
+ul li:hover ul{/*se utiliza cuando senalizo con el mouse y quiero que se despliegue el submenu. No sirve en las app de movil porque no hay mouse*/
+    display: block;
+}
+.section{
+    width: 100%;
+    height: 200px;
+}
+
+.footer{
+    width: 100%;
+    height: 100px;
+    color:aliceblue;
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+    text-align: center;
+    position: relative;
+    /*bottom: 0;*/
+}
+
+/*Estilos FlexBox*/
+.cabeza{
+    display: flex;
+    flex-flow: row nowrap;/*ROW direccion que quiero que tome, es la predeterminada y NOWRAP si quiero que mis elementos se mantengan en la misma linea QUE NO SEA MULTILINEA*/
+    align-items: center;
+    justify-content: flex-start;
+}
+.menuFlex{
+    display: flex;
+    flex-flow: row nowrap;/*ROW direccion que quiero que tome, row es la predeterminada y NOWRAP si quiero que mis elementos se mantengan en la misma linea*/
+    justify-content: space-evenly; 
+    align-items: center; /*STRECH lo que vaya a ocupar el padre que los hijos se adapten, depensera si se adaptan en lo alto o en lo ancho a si es verticar u horizntal mi flex-direction*/ 
+}
+aside{
+    background-color: rgb(95, 95, 95);
+    width: 13%;
+    height: 100vh;
+    float: left;
+}
+.asideFlex{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:flex-start;/*me determina si voy a distrubuir los items HIJOS en el CONTENEDOR padre start(arriba) end (abajo) o center (centrado)*/
+    align-items: flex-start;/*Esto es exclusivo de la distribucion de los item (HIOS) iz o derecha*/
+    align-content: flex-start; 
+}
+
+.mainFlex{
+    display: flex;
+    flex-flow: row wrap;    
+}
+.registroFlex{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;  
+}
+/*Estilo Grids*/ 
+.cajasProductos {
+    background-color: #fdfdfd;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: solid 2px rgb(0, 0, 0);
+    padding: 15px;
+}
+.contenedor{/*caja contenedora padre*/
+    background-color: #f0ddaa; 
+}
+.cajaContenedora{
+    text-align: center;
+    justify-content: center;
+}
+.negrita{
+    font-weight: bold;
+}
+/*RESPONSIVE*/
+@media (max-width: 767px){
+   
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    body{
+        background-color: rgb(145, 31, 56);
+    }
+}
+@media (min-width: 1024px){
+
+}
+/*TRANSICIONES*/
+.trans{
+    transition: font-size 3s color 2s;
+}
+.trans:hover{
+    font-size:40px;
+   color: gray;
+}
+
+/*HOVER
+  #a:hover{
+    color: #FF5733;
+}
+*/
+
+/*
+TRANSICION
+.transition {
+    background-color: #2D2F31;
+    transition: heigth 2s;/*propiedad: altura del objeto, velocidad en la que se reproduce el efecto*/
+/*
+.transition:hover{
+    height: 500px;/*si quiero que crezca o si quiero que se achique. Tengo que tener presente que la etiqueta ya tiene una propiedad asignada (heigth en este caso)*/
+/*ESTILOS FUENTES*/
+h1 .letra{
+    font-family: 'Bebas Neue', cursive;
+}
+h2 .letra{
+    font-family: 'Work Sans', sans-serif;
+}
+li a{
+    font-family: 'Work Sans', sans-serif;
+}
+.estiloLetra{
+    font-family: 'Work Sans', sans-serif;
+}
+.imagenBackground{
+    width: 50%;
+    height: 50hv;
+}

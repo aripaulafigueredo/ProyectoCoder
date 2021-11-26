@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="dieta, gluten, TACC, dietetica, saludable">
+    <meta name="description" content="Ofrecemos productos naturales, como frutas secas, cereales, legumbres, semillas, especias. Comprá sin moverte de tu casa!">
+    <title>Registrate</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <header class="cabeza">
+        <div><img class="logo" src="imagenes/logo.png" alt="logo" width="120" height="120"></div>
+        <div class="estiloLetra"><a href="ingresa.html">Ingresa</a></div>
+        <div class="estiloLetra"><a href="registrate.html">Registrate</a></div>
+    </header>
+    <nav class="menu">
+        <ul class="menuFlex">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tienda.html">Tienda</a>
+                <ul>
+                    <li><a href="#">SIN T.A.C.C</a></li>
+                    <li><a href="#">CELIACOS</a></li>
+                </ul>
+            </li>
+            <li><a href="quienesSomos.html">Quienes Somos</a></li>
+            <li><a href="#sucursales">Sucursales</a></li>
+            <li><a href="#contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main class="fondoRegistro registroFlex">
+        <h2>Crea tu cuenta</h2>
+        <h3>Se el primero en enterarte de nuestras <span class="negrita">ofertas</span> y llevá el control de tus
+            pedidos, ¡en un solo lugar!</h3>
+        <form action="" method="post">
+            <label for="nombreUsuario">Nombre y Apellido</label><br>
+            <input type="text" name=nombreUsuario id=nombreUsuario><br>
+            <!--Limite de letras-->
+            <label for="correo">Email</label><br>
+            <input type="email" name=correo id="correo"><br>
+            <label for="telefono">Teléfono (opcional)</label><br>
+            <input type="tel" name="telefono" id="telefono"><br>
+            <select name="estadoCivil" id="estadoCivil"><br>
+                <option value="seleccione">Seleccione</option>
+                <option value="soltera">Soltero/a</option>
+                <option value="casado">Casado/a</option>
+                <option value="divorciado">Divorciado/a</option>
+                <option value="viudo">Viudo/a</option>
+            </select><br>
+            <!--que tenga caracteres obligatorios-->
+            <label for="contrasena">Contraseña</label><br>
+            <input type="password" name="contrasena" id="contrasena"><br>
+            <label for="contrasenaDos">Confirmar Contraseña</label><br>
+            <input type="password" name="contrasenaDos" id="contrasenaDos"><br>
+            <!--agregar que coinician las casillas de contrasena-->
+            <input type="submit" value="Crear Cuenta" name="crearCuenta" id="crearCuenta">
+        </form>
+    </main>
+    <footer class="footer">
+        <p>Aca esta el pie de pagina</p>
+    </footer>
+</body>
+
+</html>
