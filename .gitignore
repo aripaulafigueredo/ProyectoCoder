@@ -1,0 +1,17 @@
+#IGNORAR ARCHIVOS DEL SISTEMA 
+#.DS-store 
+# package-lock.json
+
+#IGNORA CARPETAS
+#node_modules
+
+#IGNORA SUBCARPETAS 
+#nombrecarpeta/archivo
+#nombrecarpeta/nombresubcarpeta
+
+#IGNORA TODOS LOS ARCHIVOS CON LA MISMA EXTENSION
+#*.txt
+#*.gif
+
+#IGNORAR TODOS LOS ARCHIVOS DENTRO DE UN CARPETA 
+#bootstrap/scss/*.scss
